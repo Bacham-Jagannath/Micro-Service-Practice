@@ -1,0 +1,21 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: USER-SERVICE
+  zipkin:
+    enabled: true            # Enable Zipkin tracing
+    base-url: http://127.0.0.1:9411/  # Zipkin server URL (update if running Zipkin remotely)
+    sender:
+      type: web
+
+
+management:
+    tracing:
+      enabled: true           # Enable tracing
+      sampling:
+        probability: 1.0      # Set sampling rate to 100% (adjust this in production)
+#  zipkin:
+#    enabled: true
+#    base-url: http://127.0.0.1:9411/
