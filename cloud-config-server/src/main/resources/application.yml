@@ -1,0 +1,12 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: CLOUD-CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Jagannath-Bacham/Config_Server
+          clone-on-start : true
